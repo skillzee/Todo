@@ -88,6 +88,7 @@ export const logout = (req,res)=>{
         secure:process.env.NODE_ENV == "DEVELOPMENT"?false: true
     }).json({
         success: true,
-        message: "Logged Out Successfully"
+        message: "Logged Out Successfully",
+        user: req.user
     })
 }
